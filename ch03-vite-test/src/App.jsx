@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import React, { Component } from "react";
+import MyComponent from "./component/MyComponent";
 
-function App() {
-  const [count, setCount] = useState(0)
+// 1. 함수형 컴포넌트
+// function App() {
+//   const name = "오늘 점심 뭐 먹지?";
+//   return (
+//     <>
+//       <h1>ch3 컴포넌트 개념</h1>
+//       <div className="react">{name}</div>
+//     </>
+//   );
+// }
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+//2. 클래스형 컴포넌트
+class App extends Component {
+  render() {
+    const name = "오늘 점심 뭐 먹지?";
+    return (
+      <>
+        <h1>ch3 컴포넌트 개념</h1>
+        <div className="react">{name}</div>
+        <h2>
+          현재: App.jsx , 1 부모 컴포넌트에서, 자식 컴포넌트 MyComponent
+          사용하기(불러오기)!
+        </h2>
+        <MyComponent />
+        <h2>
+          현재: App.jsx , 2 부모 컴포넌트에서, 자식 컴포넌트 MyComponent props
+          전달해보기.{" "}
+        </h2>
+        <MyComponent name="이상용" />
+      </>
+    );
+  }
 }
 
-export default App
+export default App;
