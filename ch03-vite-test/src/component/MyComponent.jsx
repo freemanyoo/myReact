@@ -56,3 +56,12 @@ const MyComponent = ({ name = "기본값 이름입니다.", children }) => {
 // };
 
 export default MyComponent;
+
+// Gemini 주석 추가 시작
+// 이 파일은 MyComponent.jsx로, React의 함수형 컴포넌트입니다.
+// props(속성)를 매개변수로 받아 화면에 동적인 데이터를 표시하는 역할을 합니다.
+// `name`과 `children` 두 가지 props를 사용합니다.
+// `name` props는 구조 분해 할당을 통해 직접 접근하며, 기본값("기본값 이름입니다.")을 설정하여 props가 전달되지 않았을 경우에도 오류 없이 동작하도록 합니다.
+// `children` props는 컴포넌트 태그 사이에 위치한 내용을 그대로 렌더링할 때 사용됩니다.
+// 이 컴포넌트는 재사용 가능한 UI 조각으로, 부모 컴포넌트로부터 데이터를 받아 유연하게 내용을 변경할 수 있습니다.
+// Gemini 주석 추가 끝
