@@ -1,0 +1,13 @@
+/* .react 클래스를 가진 요소에 대한 스타일을 정의합니다. */
+.react {
+  /* 배경색을 아쿠아(aqua) 색상으로 지정합니다. */
+  background: aqua;
+  /* 글자색을 검은색(black)으로 지정합니다. */
+  color: black;
+  /* 글자 크기를 48픽셀(px)로 지정합니다. */
+  font-size: 48px;
+  /* 글자 두께를 굵게(bold)로 지정합니다. */
+  font-weight: bold;
+  /* 안쪽 여백을 16픽셀(px)로 지정합니다. */
+  padding: 16px;
+}
