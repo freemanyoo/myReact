@@ -51,7 +51,7 @@ function App() {
       <h3>7 undefined ,OR(||)확인해보기, </h3>
       {unVar || '값 : undefined'}
       <h3 style={style}>
-        ㅈ 8 인라인 스타일링 , 기존 : background-color, 변경 : backgroundColor
+        8 인라인 스타일링 , 기존 : background-color, 변경 : backgroundColor
       </h3>
       <h3 className="react">9 class 대신 className 속성을 사용함.</h3>
       <h3>
