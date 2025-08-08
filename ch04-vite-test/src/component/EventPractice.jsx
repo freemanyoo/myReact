@@ -31,6 +31,13 @@ class EventPractice extends Component {
     });
   }
 
+  // 이벤트 추가.
+  handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      this.handleClick();
+    }
+  };
+
   render() {
     return (
       <>
@@ -50,6 +57,8 @@ class EventPractice extends Component {
           //   }}
           // 방법2, 따로 분리 설정.
           onChange={this.handleChange}
+          // 추가 키 이벤트 리스너, 엔터 키를 입력시, 클릭 하는 효과 주기.
+          onKeyPress={this.handleKeyPress}
         />
 
         <input
@@ -58,6 +67,8 @@ class EventPractice extends Component {
           placeholder="사용자명 입력하기"
           value={this.state.username} // getter, state 객체 안의 message 조회
           onChange={this.handleChange}
+          // 추가 키 이벤트 리스너, 엔터 키를 입력시, 클릭 하는 효과 주기.
+          onKeyPress={this.handleKeyPress}
         />
 
         <h2>2 onClick 연습 해보기. </h2>
@@ -94,11 +105,13 @@ export default EventPractice;
 // 3.  **이벤트 핸들러 분리:**
 //     - `handleChange(e)`: `onChange` 이벤트가 발생할 때 호출됩니다. `e.target.name`을 사용하여 여러 입력 필드(message, username)의 상태를 동적으로 업데이트합니다. `setState`는 비동기적으로 작동합니다.
 //     - `handleClick()`: `onClick` 이벤트가 발생할 때 호출됩니다. 현재 `username`과 `message` 상태 값을 `alert`으로 표시하고, 상태를 초기화합니다.
-// 4.  **제어 컴포넌트:**
+// 4.  **키보드 이벤트 처리:**
+//     - `handleKeyPress(e)`: `onKeyPress` 이벤트가 발생할 때 호출됩니다. 사용자가 'Enter' 키를 누르면 `handleClick` 메서드를 호출하여 확인 버튼을 클릭한 것과 동일한 동작을 수행합니다.
+// 5.  **제어 컴포넌트:**
 //     - `<input value={this.state.message} ... />`: `input` 태그의 `value` 속성을 `state` 값과 연결하여 React가 입력 필드의 값을 제어하도록 합니다.
 //     - `onChange={this.handleChange}`: 입력 필드의 값이 변경될 때 `handleChange` 메서드를 호출합니다.
-// 5.  **JSX 내 이벤트 처리:**
+// 6.  **JSX 내 이벤트 처리:**
 //     - `onClick={this.handleClick}`: 버튼 클릭 시 `handleClick` 메서드를 호출합니다.
 //
-// 이 예제를 통해 React에서 사용자 입력을 받고, 상태를 업데이트하며, 이벤트에 반응하는 기본적인 방법을 이해할 수 있습니다.
+// 이 예제를 통해 React에서 사용자 입력을 받고, 상태를 업데이트하며, 다양한 이벤트에 반응하는 기본적인 방법을 이해할 수 있습니다.
 // Gemini 주석 추가 끝

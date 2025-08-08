@@ -1,18 +1,25 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vite'; // Vite의 구성 설정을 위한 함수 import
 import react from '@vitejs/plugin-react'; // Vue 등 다른 프레임워크는 바꿔주세요
-import path from 'path';
-import { fileURLToPath } from 'url';
+import path from 'path'; // Node.js의 경로 관련 유틸리티를 제공하는 path 모듈 (절대 경로 생성에 필요)
+import { fileURLToPath } from 'url'; // ES Module 환경에서는 __dirname이 없기 때문에 URL 기반 파일 경로를 얻기 위해 사용
 
+// ES Module 환경에서는 __dirname이 없기 때문에 URL 기반 파일 경로를 얻기 위해 사용
+// ES Module(ESM)은 **ECMAScript(자바스크립트 표준)**에서 정의한 공식 모듈 시스템입니다
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Vite 설정을 내보냄
 export default defineConfig({
-plugins: [react()],
-resolve: {
-alias: {
-'@': path.resolve(__dirname, 'src'), // @는 src/ 폴더로 연결
-},
-},
+  // 사용할 Vite 플러그인을 정의 (React 프로젝트이므로 react() 사용)
+  plugins: [react()],
+
+  // 모듈 해석 관련 설정 (import 시 경로 처리 방식 지정)
+  // 특정 경로에 접근시, 이설정을 안하면, 이런 형식으로 사용해야함. ../../../../../
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'), // @는 src/ 폴더로 연결
+    },
+  },
 });
 //  1. 필요한 모듈(라이브러리) 가져오기
 
@@ -67,7 +74,7 @@ alias: {
 //    * '@': ... : @ 라는 별칭을 설정하겠다는 의미입니다.
 //    * path.resolve(__dirname, 'src'): @ 별칭이 어떤 실제 경로를 가리킬지를 정합니다.
 //        * __dirname (프로젝트 루트 폴더)와 'src'를 합쳐서 src 폴더의 절대 경로를 만듭니다.
-//        * 결과적으로, 프로젝트의 다른 파일에서 import Component from '@/components/MyComponent' 와 같이 코드를 작성하면, Vite는 이것을 import Component from 
+//        * 결과적으로, 프로젝트의 다른 파일에서 import Component from '@/components/MyComponent' 와 같이 코드를 작성하면, Vite는 이것을 import Component from
 //          '/절대경로/to/project/src/components/MyComponent' 와 같이 해석하여 올바른 파일을 찾아냅니다.
 
 //   ---
@@ -79,4 +86,4 @@ alias: {
 //    1. React 프로젝트이므로 React 플러그인을 사용하여 코드를 처리해 주세요.
 //    2. 코드에서 @/ 라는 경로를 만나면, 그것은 프로젝트 최상위 폴더의 `src` 폴더를 의미하는 것이니 그곳에서 파일을 찾아주세요.
 
-//   이를 통해 개발자는 복잡한 상대 경로(../../components/MyComponent) 대신 깔끔한 절대 경로 별칭(@/components/MyComponent)을 사용하여 코드의 가독성과 유지보수성을 높일 수 있습니다. 
+//   이를 통해 개발자는 복잡한 상대 경로(../../components/MyComponent) 대신 깔끔한 절대 경로 별칭(@/components/MyComponent)을 사용하여 코드의 가독성과 유지보수성을 높일 수 있습니다.

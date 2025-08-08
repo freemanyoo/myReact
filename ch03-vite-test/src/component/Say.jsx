@@ -32,7 +32,7 @@ export default Say;
 
 // Gemini 주석 추가 시작
 // 이 파일은 Say.jsx로, React의 함수형 컴포넌트입니다.
-// `useState` Hook을 사용하여 컴포넌트의 상태를 관리합니다.
+// `useState` Hook(함수)을 사용하여 컴포넌트의 상태를 관리합니다.
 // `message` 상태는 텍스트 메시지를 관리하며, `setMessage` 함수로 업데이트됩니다. 초깃값은 빈 문자열("")입니다.
 // `onClickEnter` 함수는 "입장" 버튼 클릭 시 `message`를 "안녕하세요"로 설정합니다.
 // `onClickLeave` 함수는 "퇴장" 버튼 클릭 시 `message`를 "안녕히 가세요"로 설정합니다.

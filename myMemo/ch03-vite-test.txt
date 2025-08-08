@@ -3,7 +3,8 @@
 #MyComponent.JSX
 
 코드 스니펫: 플러그인에서 reactjs code snippets
-함수형 컴포넌트 : rsc
+부모태그가 있어야함 <></>
+함수형 컴포넌트 : rsc 
 클래스형 컴포넌트 : rcc
 
 export default MyComponent;   내보내기, 다른 곳에서 이용 가능. 없으면 사용 못함 

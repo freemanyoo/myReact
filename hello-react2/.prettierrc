@@ -1,8 +1,8 @@
 {
-"singleQuote":true, // 작은 따옴표 사용
-"semi": true, // 문장 끝에 ; 세미콜론을 항상 붙임
-"useTabs": false, // 들여쓰기 탭 대신, 스페이스 사용.
-"tabWidth":2, // 들여쓰기, 기본 4칸, 2칸씩
-"trailingComma":"all", // 마지막 요소에 항상 콤마 붙이기.
-"printWidth" :80 // 한줄 최대 길이 80자로 제한. , 자동 줄바꿈 처리.
+  "singleQuote": true,
+  "semi": true,
+  "useTabs": false,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "printWidth": 80
 }
