@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "prettier": "3.6.2"
+  },
+  "dependencies": {
+    "include-media": "^2.0.0",
+    "open-color": "^1.9.1"
   }
 }

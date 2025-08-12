@@ -1,0 +1,164 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Gemini 주석 추가 시작 */
+/* 이 파일은 `index.css`로, Vite로 생성된 React 프로젝트의 전역적인 기본 스타일을 정의합니다. */
+/* 주로 HTML 문서의 기본 폰트, 색상, 링크, 버튼 등의 스타일을 설정하여 일관된 디자인을 제공합니다. */
+
+/* :root 선택자: */
+/* - CSS 변수를 정의하거나 문서의 최상위 요소에 전역 스타일을 적용할 때 사용됩니다. */
+/* - `font-family`, `line-height`, `font-weight`: 기본 폰트 및 텍스트 스타일을 설정합니다. */
+/* - `color-scheme`: 사용자 시스템의 색상 스키마(light/dark)에 따라 요소의 기본 색상을 조정합니다. */
+/* - `color`, `background-color`: 기본 글자색과 배경색을 설정합니다. */
+/* - `font-synthesis`, `text-rendering`, `-webkit-font-smoothing`, `-moz-osx-font-smoothing`: 폰트 렌더링 최적화 및 안티앨리어싱 설정을 합니다. */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* a (링크) 선택자: */
+/* - `font-weight`, `color`, `text-decoration`: 링크의 기본 스타일을 설정합니다. */
+/* - `a:hover`: 마우스 오버 시 링크의 색상을 변경합니다. */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* body 선택자: */
+/* - `margin: 0;`: 페이지의 기본 마진을 제거합니다. */
+/* - `display: flex;`, `place-items: center;`: body 내용을 중앙에 정렬합니다. */
+/* - `min-width`, `min-height`: 최소 너비와 높이를 설정하여 전체 화면을 채우도록 합니다. */
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* h1 선택자: */
+/* - `font-size`, `line-height`: h1 태그의 글자 크기와 줄 간격을 설정합니다. */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* button 선택자: */
+/* - `border-radius`, `border`, `padding`, `font-size`, `font-weight`, `font-family`, `background-color`, `cursor`, `transition`: 버튼의 기본 스타일을 설정합니다. */
+/* - `button:hover`: 마우스 오버 시 버튼 테두리 색상을 변경합니다. */
+/* - `button:focus`, `button:focus-visible`: 포커스 시 아웃라인 스타일을 설정합니다. */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* @media (prefers-color-scheme: light) 블록: */
+/* - 사용자의 시스템 설정이 라이트 모드일 때 적용되는 스타일입니다. */
+/* - `:root`의 글자색과 배경색, 링크의 호버 색상, 버튼의 배경색을 라이트 모드에 맞게 변경합니다. */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+/* Gemini 주석 추가 끝 */

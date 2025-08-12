@@ -1,23 +1,13 @@
-// 변수 사용하기
-$red: #fa5252;
-$orange: #fd7e14;
-$yellow: #fcc419;
-$green: #40c057;
-$blue: #339af0;
-$indigo: #5c7cfa;
-$violet: #7950f2;
-//실습1
-$pink: #fc19d2;
+@import "./utils";
 
-// 믹스인 만들기 (재사용되는 스타일 블록을 함수처럼 사용할 수 있음)
-// 실습2, 속성 border 추가.
-@mixin square($size, $border: none) {
-  $calculated: 32px * $size;
-  width: $calculated;
-  height: $calculated;
-  // 실습2,
-  border: $border;
-}
+// open-color , include-media : 색상 팔레트 쉽게 쓰기, 미디어쿼리 쉽게 이용하는 도구.
+//  yarn add open-color include-media
+
+// 사용법
+@import 'include-media/dist/_include-media';
+@import 'open-color/open-color';
+// 공식 문서에서 사용하는 컬러표 확인
+//https://github.com/yeun/open-color
 
 :local .wrapperSassComponent {
   background: black;
@@ -28,24 +18,25 @@ $pink: #fc19d2;
 
 .SassComponent {
   display: flex;
-  // 추가, 외부 기능, 컬러 선택,
-  // 미디어 반응형 쉽게 해주는 기능
+  //  // 추가, 외부 기능, 컬러 선택,
+  //  // 미디어 반응형 쉽게 해주는 기능
   background: $oc-gray-2;
+  background: $gray;
 
   @include media('<768px') {
-    background: $oc-gray-9;
+    background: $oc-teal-6;
   }
 
   .box {
-
+    //background: $red;
     //실습3, 첫번째요소, 마지막 요소, 각각 색상 표기.
-    &:first-child {
-      background: $yellow;
-    }
-
-    &:last-child {
-      background: $green;
-    }
+    //&:first-child {
+    //  background: $yellow;
+    //}
+    //
+    //&:last-child {
+    //  background: $green;
+    //}
 
     background: red;
     cursor: pointer;
@@ -101,5 +92,5 @@ $pink: #fc19d2;
     &:hover {
       background: black;
     }
-  }
+  } // box 닫는 부분
 }

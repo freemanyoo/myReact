@@ -5,8 +5,52 @@
     font-size: 2rem;
 }
 
+.inverted {
+    background: white;
+    color: red;
+    border : 1px solid yellow;
+}
+/*웹브라우저에서 확인시 클래스 명이 중복되지 않는 부분 확인.*/
+/*<div class="_wrapper_1nxym_1 _inverted_1nxym_15">*/
+
+
 /*글로벌 css 작성해보기*/
 :global .something{
     font-weight: 800;
     color: aqua;
 }
+
+/* Gemini 주석 추가 시작 */
+/* 이 파일은 `CSSModule.module.css`로, `CSSModule.jsx` 컴포넌트에서 사용되는 CSS Module 파일입니다. */
+/* `.module.css` 확장자를 사용함으로써, 이 파일에 정의된 모든 클래스 이름은 자동으로 고유한 해시 값을 포함하게 되어 */
+/* 전역적인 클래스명 충돌을 방지하고 컴포넌트별로 스타일을 캡슐화할 수 있습니다. */
+
+/* .wrapper 클래스: */
+/* - 검은색 배경, 1rem 패딩, 흰색 글자색, 2rem 글자 크기를 가집니다. */
+/* - 이 클래스는 `CSSModule.jsx`에서 `styles.wrapper`로 참조됩니다. */
+.wrapper {
+    background: black;
+    padding: 1rem;
+    color: white;
+    font-size: 2rem;
+}
+
+/* .inverted 클래스: */
+/* - 흰색 배경, 빨간색 글자색, 1px 노란색 테두리를 가집니다. */
+/* - 이 클래스는 `CSSModule.jsx`에서 `styles.inverted`로 참조되며, `wrapper` 클래스와 함께 적용될 수 있습니다. */
+.inverted {
+    background: white;
+    color: red;
+    border : 1px solid yellow;
+}
+
+/* :global 규칙: */
+/* - `:global` 키워드를 사용하면 CSS Module 내에서도 전역적으로 적용되는 클래스를 정의할 수 있습니다. */
+/* - `.something` 클래스는 `CSSModule.jsx`에서 일반 `className`으로 사용되었으며, */
+/*   이 `:global` 규칙에 의해 전역적으로 스타일이 적용됩니다. */
+/* - `font-weight: 800;` (매우 굵게) 및 `color: aqua;` (아쿠아색) 스타일이 적용됩니다. */
+:global .something{
+    font-weight: 800;
+    color: aqua;
+}
+/* Gemini 주석 추가 끝 */
