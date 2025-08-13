@@ -1,3 +1,8 @@
+node js 설치
+
+yarn 설치
+npm install -g yarn
+
 yarn create vite 폴더명 --template react
 
 Sass (SCSS) 설치
