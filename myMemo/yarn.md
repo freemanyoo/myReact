@@ -1,3 +1,5 @@
+yarn create vite 폴더명 --template react
+
 Sass (SCSS) 설치
 yarn add sass
 

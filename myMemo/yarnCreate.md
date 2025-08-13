@@ -1,1 +1,0 @@
-yarn create vite 폴더명 --template react
