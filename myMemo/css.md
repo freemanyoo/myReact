@@ -10,3 +10,9 @@ yarn add open-color include-media
 
 공식 문서에서 사용하는 컬러표 확인
 https://github.com/yeun/open-color
+
+styled-components 설치
+yarn add styled-component
+
+라이브러리 설치
+yarn add sass classnames react-icons
