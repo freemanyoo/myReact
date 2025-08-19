@@ -7,7 +7,7 @@ import { useCallback, useRef, useState } from 'react';
 //더미 데이터 2500개 만드는 함수
 function createBulkTodos() {
   const array = [];
-  for (let i = 1; i <= 5000; i++) {
+  for (let i = 1; i <= 10000; i++) {
     array.push({
       id: i,
       text: `할일 ${i}`,

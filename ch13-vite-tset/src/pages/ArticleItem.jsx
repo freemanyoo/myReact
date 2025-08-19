@@ -1,12 +1,8 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-// 임의로 같은 파일에, 컴포넌트 만들기.
 const ArticleItem = ({ id }) => {
-  // 샘플 css
-  const activeStyle = {
-    color: 'green',
-    fontSize: '21px',
-  };
+  const activeStyle = { color: 'green', fontSize: '21px' };
   return (
     <li>
       <NavLink

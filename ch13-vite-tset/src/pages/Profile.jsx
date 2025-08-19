@@ -13,12 +13,21 @@ const data = {
 };
 
 const Profile = () => {
+  // App.jsx 에서 설정한 :username 파라미터 객체의 키 값을 이용해서 정보를 가져오기
+  //예시, http://localhost:5174/profile/lsy
+  // params.username -> 값 : lsy
+  // data[params.username] -> data[lsy]
+  // data[lsy]  ->
+  // 예)  lsy: {
+  //     name: '이상용',
+  //     description: '오늘 점심 뭐 먹지?',
+  //   },
   const params = useParams();
   const profile = data[params.username];
 
   return (
     <div>
-      <h1>사용자 프로필</h1>
+      <h1>사용자 프로필</h1> ㅍ퓨
       {profile ? (
         <div>
           <h2>{profile.name}</h2>

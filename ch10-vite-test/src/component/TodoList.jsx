@@ -32,14 +32,17 @@ const TodoList = ({ todos, onRemove, onToggle }) => {
       list={todos}
       style={{ outline: 'none' }}
     >
-      {todos.map((todo) => (
-        <TodoListItem
-          todo={todo}
-          key={todo.id}
-          onRemove={onRemove}
-          onToggle={onToggle}
-        />
-      ))}
+      <>
+        {todos.map((todo) => (
+          <TodoListItem
+            todo={todo}
+            key={todo.id}
+            onRemove={onRemove}
+            onToggle={onToggle}
+          />
+        ))}
+      </>
+      //{' '}
     </List>
   );
 };

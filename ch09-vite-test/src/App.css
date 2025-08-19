@@ -23,12 +23,7 @@
 /* - `margin: 0 auto;`: 요소를 가로 중앙에 정렬합니다. */
 /* - `padding: 2rem;`: 내부 여백을 2rem으로 설정합니다. */
 /* - `text-align: center;`: 텍스트를 중앙 정렬합니다. */
-#root {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
-}
+
 
 /* .react 선택자: */
 /* - `react` 클래스를 가진 요소에 적용되는 스타일입니다. */
@@ -37,11 +32,5 @@
 /* - `font-size: 48px;`: 글자 크기를 48px로 설정합니다. */
 /* - `font-weight: bold;`: 글자를 굵게 표시합니다. */
 /* - `padding: 16px;`: 내부 여백을 16px로 설정합니다. */
-.react {
-    background: aqua;
-    color: black;
-    font-size: 48px;
-    font-weight: bold;
-    padding: 16px;
-}
+
 /* Gemini 주석 추가 끝 */

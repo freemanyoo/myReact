@@ -1,6 +1,7 @@
 import './App.css';
 import LunchMatchTemplate from './component/LunchMatchTemplate.jsx';
 import LunchMatchInsert from './component/LunchMatchInsert.jsx';
+import LunchMatchList from './component/LunchMatchList.jsx';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <h1 className="study">오늘 점심 뭐 먹지?</h1>
       <LunchMatchTemplate>
         <LunchMatchInsert />
+        <LunchMatchList />
       </LunchMatchTemplate>
     </>
   );
